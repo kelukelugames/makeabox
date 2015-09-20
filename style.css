@@ -3,6 +3,38 @@
     height: 50px;
 }
 
+td {
+    height: 200px;
+}
+
+.F .box {
+    background-color: brown;
+}
+
+.F :nth-child(2) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.F.flipped :nth-child(2) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.F :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.F.flipped :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.I .box {
+    background-color: pink;
+}
+
 .L .box {
     background-color: #DD5454;
 }
@@ -18,11 +50,21 @@
 }
 
 .Y .box {
-    background-color: #DD9954;
+    background-color: green;
+}
+
+.Y :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.Y.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
 }
 
 .box {
-    border: 1px solid #AAA;
+    border: 1px solid black; //#AAA;
     margin: -1px;
 }
 
@@ -31,7 +73,7 @@
     height: 0px;
     width: 0px;
     position: relative;
-    margin: 100px;
+    margin: 60px;
 }
 
 body {
