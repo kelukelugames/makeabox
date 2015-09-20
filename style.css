@@ -71,6 +71,28 @@ td {
     margin-left: -52px;
 }
 
+.P .box {
+    background-color: yellow;
+}
+
+.P :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -103px;
+}
+
+.P.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -103px;
+}
+
+.P :nth-child(5) {
+    margin-left: 50px; 
+}
+
+.P.flipped :nth-child(5) {
+    margin-left: -52px;
+}
+
 
 .Y .box {
     background-color: green;

@@ -7,8 +7,6 @@
 
 
 working:
-N
-P
 T
 U
 V
@@ -21,5 +19,7 @@ finished:
 F
 I
 L
+N
+P
 Y
 
