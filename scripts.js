@@ -2,6 +2,11 @@ $(document).ready(function() {
     $(".piece").click(function() {
         rotate(this);
     });
+
+
+	  $(function() {
+	    $( ".piece" ).draggable();
+	  });
 });
 
 function flip(x) {
