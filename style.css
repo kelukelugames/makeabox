@@ -1,16 +1,39 @@
 .box {
     width: 100px;
     height: 100px;
+}
+
+.L .box {
+    background-color: green;
+
+}
+
+.L :nth-child(5) {
+    margin-left: 100px; 
+    margin-top: -100px;
+}
+
+.L.flipped :nth-child(5) {
+    margin-left: -100px; 
+    margin-top: -100px;
+}
+
+.red .box {
     background-color: red;
 }
 
-.piece {
-    display: block;
-    position: relative;
+.box {
+    outline:1px solid black;
 }
 
+
 .container {
-    height: 50px;
-    width: 50px;
-    position: absolute;
+    height: 0px;
+    width: 0px;
+    position: relative;
+    margin: 200px;
+}
+
+body {
+    font-size: 20px;
 }
