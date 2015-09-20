@@ -7,9 +7,6 @@
 
 
 working:
-T
-U
-V
 W
 X
 Z
@@ -21,5 +18,8 @@ I
 L
 N
 P
+T
+U
+V
 Y
 

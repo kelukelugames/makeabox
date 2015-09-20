@@ -4,7 +4,7 @@
 }
 
 td {
-    height: 200px;
+    height: 300px;
 }
 
 .F .box {
@@ -93,6 +93,57 @@ td {
     margin-left: -52px;
 }
 
+.T .box {
+    background-color: white;
+}
+
+.T :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -154px;
+}
+
+.T :nth-child(5) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.U .box {
+    background-color: gray;
+}
+
+.U :nth-child(2) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.U :nth-child(5) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.V .box {
+    background-color: blue;
+}
+
+.V :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.V.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.V :nth-child(5) {
+    margin-left: 101px; 
+    margin-top: -52px; 
+}
+
+.V.flipped :nth-child(5) {
+    margin-left: -102px;
+    margin-top: -52px; 
+}
 
 .Y .box {
     background-color: green;
