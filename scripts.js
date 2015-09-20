@@ -12,10 +12,6 @@ $(document).ready(function() {
 		updateZIndex(this);
 	});
 
-	$(function() {
-		$( ".piece" ).draggable();
-	});
-
 	$('.piece').mousedown(function() {
 		$(this).addClass("selected");
 	    $(document).mousemove(function(){
