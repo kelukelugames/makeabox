@@ -49,6 +49,29 @@ td {
     margin-top: -52px;
 }
 
+.N .box {
+    background-color: purple;
+}
+
+.N :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.N.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.N :nth-child(5) {
+    margin-left: 50px; 
+}
+
+.N.flipped :nth-child(5) {
+    margin-left: -52px;
+}
+
+
 .Y .box {
     background-color: green;
 }

@@ -3,7 +3,7 @@
 
 8. add 12 colors https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Colors/Color_picker_tool
 
-9. set initial positions
+9. tweak initial positions
 
 
 working:
