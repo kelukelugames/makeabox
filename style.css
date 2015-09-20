@@ -1,6 +1,6 @@
 .box {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 .L .box {
@@ -9,13 +9,13 @@
 }
 
 .L :nth-child(5) {
-    margin-left: 100px; 
-    margin-top: -100px;
+    margin-left: 50px; 
+    margin-top: -50px;
 }
 
 .L.flipped :nth-child(5) {
-    margin-left: -100px; 
-    margin-top: -100px;
+    margin-left: -50px; 
+    margin-top: -50px;
 }
 
 .red .box {
@@ -31,9 +31,9 @@
     height: 0px;
     width: 0px;
     position: relative;
-    margin: 200px;
+    margin: 100px;
 }
 
 body {
-    font-size: 20px;
+    font-size: 0px;
 }
