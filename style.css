@@ -4,26 +4,26 @@
 }
 
 .L .box {
-    background-color: green;
-
+    background-color: #DD5454;
 }
 
 .L :nth-child(5) {
     margin-left: 50px; 
-    margin-top: -50px;
+    margin-top: -52px;
 }
 
 .L.flipped :nth-child(5) {
-    margin-left: -50px; 
-    margin-top: -50px;
+    margin-left: -52px; 
+    margin-top: -52px;
 }
 
-.red .box {
-    background-color: red;
+.Y .box {
+    background-color: #DD9954;
 }
 
 .box {
-    outline:1px solid black;
+    border: 1px solid #AAA;
+    margin: -1px;
 }
 
 
@@ -35,5 +35,6 @@
 }
 
 body {
+    background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/light_checkered_tiles.png");
     font-size: 0px;
 }
