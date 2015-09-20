@@ -3,27 +3,226 @@
     height: 50px;
 }
 
-.L .box {
-    background-color: green;
+td {
+    height: 300px;
+    width: 150px;
+}
 
+.F .box {
+    background-color: rgb(183, 232, 135);
+}
+
+.F :nth-child(2) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.F.flipped :nth-child(2) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.F :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.F.flipped :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.I .box {
+    background-color: rgb(135, 232, 135);
+}
+
+.L .box {
+    background-color: rgb(135, 232, 183);
 }
 
 .L :nth-child(5) {
     margin-left: 50px; 
-    margin-top: -50px;
+    margin-top: -52px;
 }
 
 .L.flipped :nth-child(5) {
-    margin-left: -50px; 
-    margin-top: -50px;
+    margin-left: -52px; 
+    margin-top: -52px;
 }
 
-.red .box {
-    background-color: red;
+.N .box {
+    background-color: rgb(135, 232, 232);
+}
+
+.N :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.N.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.N :nth-child(5) {
+    margin-left: 50px; 
+}
+
+.N.flipped :nth-child(5) {
+    margin-left: -52px;
+}
+
+.P .box {
+    background-color: rgb(135, 183, 232);
+}
+
+.P :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -103px;
+}
+
+.P.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -103px;
+}
+
+.P :nth-child(5) {
+    margin-left: 50px; 
+}
+
+.P.flipped :nth-child(5) {
+    margin-left: -52px;
+}
+
+.T .box {
+    background-color: rgb(135, 135, 232);
+}
+
+.T :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -154px;
+}
+
+.T :nth-child(5) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.U .box {
+    background-color: rgb(183, 135, 232);
+}
+
+.U :nth-child(2) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.U :nth-child(5) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.V .box {
+    background-color: rgb(232, 135, 232);
+}
+
+.V :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.V.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.V :nth-child(5) {
+    margin-left: 101px; 
+    margin-top: -52px; 
+}
+
+.V.flipped :nth-child(5) {
+    margin-left: -102px;
+    margin-top: -52px; 
+}
+
+.W .box {
+    background-color: rgb(232, 135, 183);
+}
+
+.W :nth-child(3) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.W :nth-child(4) {
+    margin-left: 50px; 
+}
+
+.W :nth-child(5) {
+    margin-left: 101px; 
+    margin-top: -52px; 
+}
+
+.X .box {
+    background-color: rgb(232, 135, 135);
+}
+
+.X :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -103px;
+}
+
+.X :nth-child(5) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.Y .box {
+    background-color: rgb(232, 183, 135);
+}
+
+.Y :nth-child(4) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.Y.flipped :nth-child(4) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.Z .box {
+    background-color: rgb(232, 232, 135);
+}
+
+.Z :nth-child(2) {
+    margin-left: 50px; 
+    margin-top: -52px;
+}
+
+.Z.flipped :nth-child(2) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.Z :nth-child(5) {
+    margin-left: -52px; 
+    margin-top: -52px;
+}
+
+.Z.flipped :nth-child(5) {
+    margin-left: 50px; 
+    margin-top: -52px;
 }
 
 .box {
-    outline:1px solid black;
+    border: 1px solid #AAA;
+    margin: -1px;
+}
+
+.selected .box {
+    border-color: #666;
 }
 
 
@@ -31,9 +230,9 @@
     height: 0px;
     width: 0px;
     position: relative;
-    margin: 100px;
 }
 
 body {
+    background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/light_checkered_tiles.png");
     font-size: 0px;
 }
