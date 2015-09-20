@@ -5,6 +5,7 @@ $(document).ready(function() {
 		} else {
 		    isDragging = false;
 		}
+		$(this).removeClass("selected");
 	});
 	
 	$(".piece").mousedown(function() {
@@ -16,6 +17,7 @@ $(document).ready(function() {
 	});
 
 	$('.piece').mousedown(function() {
+		$(this).addClass("selected");
 	    $(document).mousemove(function(){
 	       isDragging = true;
 	    });
