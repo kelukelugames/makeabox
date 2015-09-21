@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	/*
 	$(".piece").click(function() {
 		if (!isDragging) {
 			rotate(this);
@@ -8,6 +7,10 @@ $(document).ready(function() {
 		}
 		$(this).removeClass("selected");
 	});
+
+    $(function() {
+      $( ".piece" ).draggable();
+    });
 	
 	$(".piece").mousedown(function() {
 		updateZIndex(this);
@@ -22,7 +25,7 @@ $(document).ready(function() {
 
 	$(document).mouseup(function() {
 	    $(document).unbind('mousemove');
-	});*/
+	});
 });
 
 var isDragging = false;

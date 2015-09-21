@@ -1,2 +1,5 @@
+restore to original
 
-6. fix mobile http://touchpunch.furf.com/
+try x shape for "drag me" set it to piece
+
+does dragging child move the parent?
