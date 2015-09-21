@@ -27,7 +27,7 @@ $(document).ready(function() {
 			var deltaX = x - event.clientX;
 			var deltaY = y - event.clientY;
 
-			if (deltaX * deltaX + deltaY * deltaY > 10) {
+			if (deltaX * deltaX + deltaY * deltaY > 20) {
 		       	isDragging = true;
 		    }
 	    });
