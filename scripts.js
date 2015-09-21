@@ -11,12 +11,9 @@ $(document).ready(function() {
     $(function() {
       $( ".piece" ).draggable();
     });
-	
+/*
 	$(".piece").mousedown(function() {
 		updateZIndex(this);
-	});
-
-	$(".piece").mousedown(function() {
 		x = event.clientX;
 		y = event.clientY;
 		console.log("original eventx: " + x + " eventy: " + y);
@@ -36,7 +33,7 @@ $(document).ready(function() {
 	$(".piece").mouseup(function() {
 	    $(this).unbind('mousemove');
 		$(this).removeClass("selected");
-	});
+	});*/
 });
 
 var isDragging = false;
