@@ -18,8 +18,8 @@ $(document).ready(function() {
 
 	$(".piece").mousedown(function() {
 		$(this).addClass("selected");
-	    $(document).mousemove(function(){
-	       isDragging = true;
+	    $(this).mousemove(function(){
+	       	isDragging = true;
 	    });
 	});
 

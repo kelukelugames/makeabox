@@ -131,18 +131,8 @@ td {
     margin-top: -52px;
 }
 
-.V .flipped .box:nth-of-type(4) {
-    margin-left: -52px; 
-    margin-top: -52px;
-}
-
 .V .box:nth-of-type(5) {
     margin-left: 101px; 
-    margin-top: -52px; 
-}
-
-.V .flipped .box:nth-of-type(5) {
-    margin-left: -102px;
     margin-top: -52px; 
 }
 
@@ -227,8 +217,6 @@ td {
 
 
 .container {
-    height: 0px;
-    width: 0px;
     position: relative;
 }
 
