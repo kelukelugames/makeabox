@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".piece").click(function() {
+	$(".rotatable").click(function() {
 		if (!isDragging) {
 			rotate(this);
 		} else {
@@ -16,15 +16,16 @@ $(document).ready(function() {
 		updateZIndex(this);
 	});
 
-	$('.piece').mousedown(function() {
+	$(".piece").mousedown(function() {
 		$(this).addClass("selected");
 	    $(document).mousemove(function(){
 	       isDragging = true;
 	    });
 	});
 
-	$(document).mouseup(function() {
-	    $(document).unbind('mousemove');
+	$(".piece").mouseup(function() {
+	    $(this).unbind('mousemove');
+		$(this).removeClass("selected");
 	});
 });
 
