@@ -17,9 +17,19 @@ $(document).ready(function() {
 	});
 
 	$(".piece").mousedown(function() {
+		x = event.clientX;
+		y = event.clientY;
+		console.log("original eventx: " + x + " eventy: " + y);
 		$(this).addClass("selected");
+	
 	    $(this).mousemove(function(){
-	       	isDragging = true;
+			console.log("eventx: " + event.clientX + " eventy: " + event.clientY);
+			var deltaX = x - event.clientX;
+			var deltaY = y - event.clientY;
+
+			if (deltaX * deltaX + deltaY * deltaY > 1) {
+		       	isDragging = true;
+		    }
 	    });
 	});
 
@@ -31,6 +41,8 @@ $(document).ready(function() {
 
 var isDragging = false;
 var zIndex = 1;
+var x;
+var y;
 
 function updateZIndex(x) {
 	$(x).css("z-index", zIndex);
