@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $(function() {
+      $( ".piece" ).draggable();
+    });
+
 	$(".rotatable").click(function() {
 		if (!isDragging) {
 			rotate(this);
@@ -8,11 +12,7 @@ $(document).ready(function() {
 		$(this).removeClass("selected");
 	});
 
-    $(function() {
-      $( ".piece" ).draggable();
-    });
-/*
-	$(".piece").mousedown(function() {
+	$(".rotatable").bind("mousedown touchstart", function() {
 		updateZIndex(this);
 		x = event.clientX;
 		y = event.clientY;
@@ -30,10 +30,10 @@ $(document).ready(function() {
 	    });
 	});
 
-	$(".piece").mouseup(function() {
+	$(".rotatable").mouseup(function() {
 	    $(this).unbind('mousemove');
 		$(this).removeClass("selected");
-	});*/
+	});
 });
 
 var isDragging = false;
