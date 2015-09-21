@@ -3,35 +3,36 @@ $(document).ready(function() {
       $( ".piece" ).draggable();
     });
 
-	$(".rotatable").click(function() {
-		if (!isDragging) {
-			rotate(this);
-		} else {
-		    isDragging = false;
-		}
-		$(this).removeClass("selected");
-	});
-
-	$(".rotatable").bind("mousedown touchstart", function() {
+	$(".piece").bind("mousedown touchstart", function() {
 		updateZIndex(this);
-		x = event.clientX;
-		y = event.clientY;
-		console.log("original eventx: " + x + " eventy: " + y);
 		$(this).addClass("selected");
-	
-	    $(this).mousemove(function(){
-			console.log("eventx: " + event.clientX + " eventy: " + event.clientY);
-			var deltaX = x - event.clientX;
-			var deltaY = y - event.clientY;
 
-			if (deltaX * deltaX + deltaY * deltaY > 20) {
-		       	isDragging = true;
-		    }
-	    });
+		if ($(this).hasClass("rotatable")) {
+			x = event.clientX;
+			y = event.clientY;
+			console.log("original eventx: " + x + " eventy: " + y);
+		
+		    $(this).mousemove(function(){
+				console.log("eventx: " + event.clientX + " eventy: " + event.clientY);
+				var deltaX = x - event.clientX;
+				var deltaY = y - event.clientY;
+
+				if (deltaX * deltaX + deltaY * deltaY > 20) {
+			       	isDragging = true;
+			    }
+		    });
+		}
 	});
 
-	$(".rotatable").mouseup(function() {
-	    $(this).unbind('mousemove');
+	$(".piece").bind("mouseup touchend", function() {
+		if (!isDragging && $(this).hasClass("rotatable")) {
+			rotate(this);
+		}		    
+
+		isDragging = false;
+
+	    $(this).unbind("mousemove");
+	    $(this).unbind("touchmove");
 		$(this).removeClass("selected");
 	});
 });
