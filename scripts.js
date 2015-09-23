@@ -27,11 +27,6 @@ $(document).ready(function() {
 
   $(".rotatable").bind( "tap", rotate);
  
-  function tapHandler(){
-  	console.log("hello");
-  	debugger;
-  }
-
 	$(".piece").bind("mouseup", function() {
 		/*
 		if (!isDragging && $(this).hasClass("rotatable")) {
@@ -76,5 +71,6 @@ function rotate() {
 	if (n == 0) {
 		flip(this);
 	}
+	console.log("eh");
 }
 
