@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$(".piece").bind("mousedown", function() {
 		updateZIndex(this);
 		$(this).addClass("selected");
-
+/*
 		if ($(this).hasClass("rotatable")) {
 			x = event.clientX;
 			y = event.clientY;
@@ -17,17 +17,26 @@ $(document).ready(function() {
 				var deltaX = x - event.clientX;
 				var deltaY = y - event.clientY;
 
-				if (deltaX * deltaX + deltaY * deltaY > 20) {
+				if (deltaX * deltaX + deltaY * deltaY > 1) {
 			       	isDragging = true;
 			    }
 		    });
-		}
+		}*/
 	});
 
+
+  $(".rotatable").bind( "tap", rotate);
+ 
+  function tapHandler(){
+  	console.log("hello");
+  	debugger;
+  }
+
 	$(".piece").bind("mouseup", function() {
+		/*
 		if (!isDragging && $(this).hasClass("rotatable")) {
 			rotate(this);
-		}		    
+		}		 */   
 
 		isDragging = false;
 
@@ -55,17 +64,17 @@ function flip(x) {
 	}
 }
 
-function rotate(x) {
-	var n = (90 + parseInt(x.style["transform"] ?
-		x.style["transform"].match(/\d+/)[0] : 0)) % 360;
+function rotate() {
+	var n = (90 + parseInt(this.style["transform"] ?
+		this.style["transform"].match(/\d+/)[0] : 0)) % 360;
 	
-	x.style.transform = n;
-	x.style.webkitTransform = "rotate(" + n + "deg)"
-	x.style.OTransform = "rotate(" + n + "deg)"
-	x.style.MozTransform = "rotate(" + n + "deg)"
+	this.style.transform = n;
+	this.style.webkitTransform = "rotate(" + n + "deg)"
+	this.style.OTransform = "rotate(" + n + "deg)"
+	this.style.MozTransform = "rotate(" + n + "deg)"
 
 	if (n == 0) {
-		flip(x);
+		flip(this);
 	}
 }
 
