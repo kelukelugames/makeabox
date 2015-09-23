@@ -1,50 +1,24 @@
 $(document).ready(function() {
-    $(function() {
-      $( ".piece" ).draggable();
-    });
+	$(function() {
+		$( ".piece" ).draggable();
+	});
 
 	$(".piece").bind("mousedown", function() {
 		updateZIndex(this);
 		$(this).addClass("selected");
-/*
-		if ($(this).hasClass("rotatable")) {
-			x = event.clientX;
-			y = event.clientY;
-			console.log("original eventx: " + x + " eventy: " + y);
-		
-		    $(this).mousemove(function(){
-				console.log("eventx: " + event.clientX + " eventy: " + event.clientY);
-				var deltaX = x - event.clientX;
-				var deltaY = y - event.clientY;
-
-				if (deltaX * deltaX + deltaY * deltaY > 1) {
-			       	isDragging = true;
-			    }
-		    });
-		}*/
 	});
 
 
-  $(".rotatable").bind( "tap", rotate);
- 
+	$(".rotatable").bind( "tap", rotate);
+	
 	$(".piece").bind("mouseup", function() {
-		/*
-		if (!isDragging && $(this).hasClass("rotatable")) {
-			rotate(this);
-		}		 */   
-
-		isDragging = false;
-
-	    $(this).unbind("mousemove");
-	    $(this).unbind("touchmove");
+		$(this).unbind("mousemove");
+		$(this).unbind("touchmove");
 		$(this).removeClass("selected");
 	});
 });
 
-var isDragging = false;
 var zIndex = 1;
-var x;
-var y;
 
 function updateZIndex(x) {
 	$(x).css("z-index", zIndex);
@@ -71,6 +45,6 @@ function rotate() {
 	if (n == 0) {
 		flip(this);
 	}
-	console.log("eh");
+	console.log("yes");
 }
 
