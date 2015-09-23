@@ -5,20 +5,15 @@ $(document).ready(function() {
 
 	$(".rotatable").bind( "tap", rotate);
 
-/*
+
 	$(".piece").bind("mousedown", function() {
 		updateZIndex(this);
 		$(this).addClass("selected");
 	});
 
-
-	$(".rotatable").bind( "tap", rotate);
-
 	$(".piece").bind("mouseup", function() {
-		$(this).unbind("mousemove");
-		$(this).unbind("touchmove");
 		$(this).removeClass("selected");
-	});*/
+	});
 });
 
 var zIndex = 1;
@@ -37,6 +32,7 @@ function flip(x) {
 }
 
 function rotate() {
+	updateZIndex(this);
 	var n = (90 + parseInt(this.style["transform"] ?
 		this.style["transform"].match(/\d+/)[0] : 0)) % 360;
 	
@@ -48,6 +44,5 @@ function rotate() {
 	if (n == 0) {
 		flip(this);
 	}
-	console.log("yes");
 }
 
