@@ -123,7 +123,7 @@ td {
 }
 
 .V .box {
-    background-color: rgb(232, 135, 232);
+    background-color: black; /*rgb(232, 135, 232);*/
 }
 
 .V .box:nth-of-type(4) {

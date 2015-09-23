@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$(function() {
 		$( ".piece" ).draggable();
 	});
-
+/*
 	$(".piece").bind("mousedown", function() {
 		updateZIndex(this);
 		$(this).addClass("selected");
@@ -10,12 +10,12 @@ $(document).ready(function() {
 
 
 	$(".rotatable").bind( "tap", rotate);
-	
+
 	$(".piece").bind("mouseup", function() {
 		$(this).unbind("mousemove");
 		$(this).unbind("touchmove");
 		$(this).removeClass("selected");
-	});
+	});*/
 });
 
 var zIndex = 1;
