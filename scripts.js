@@ -2,6 +2,9 @@ $(document).ready(function() {
 	$(function() {
 		$( ".piece" ).draggable();
 	});
+
+	$(".rotatable").bind( "tap", rotate);
+
 /*
 	$(".piece").bind("mousedown", function() {
 		updateZIndex(this);
