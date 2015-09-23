@@ -3,7 +3,7 @@ $(document).ready(function() {
       $( ".piece" ).draggable();
     });
 
-	$(".piece").bind("mousedown touchstart", function() {
+	$(".piece").bind("mousedown", function() {
 		updateZIndex(this);
 		$(this).addClass("selected");
 
@@ -24,7 +24,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$(".piece").bind("mouseup touchend", function() {
+	$(".piece").bind("mouseup", function() {
 		if (!isDragging && $(this).hasClass("rotatable")) {
 			rotate(this);
 		}		    
