@@ -1,35 +1,21 @@
 $(document).ready(function() {
-	$(".rotatable").click(function() {
-		if (!isDragging) {
-			rotate(this);
-		} else {
-		    isDragging = false;
-		}
-		$(this).removeClass("selected");
+	$(function() {
+		$( ".piece" ).draggable();
 	});
 
-    $(function() {
-      $( ".piece" ).draggable();
-    });
-	
-	$(".piece").mousedown(function() {
+	$(".rotatable").bind( "tap", rotate);
+
+
+	$(".piece").bind("mousedown", function() {
 		updateZIndex(this);
-	});
-
-	$(".piece").mousedown(function() {
 		$(this).addClass("selected");
-	    $(this).mousemove(function(){
-	       	isDragging = true;
-	    });
 	});
 
-	$(".piece").mouseup(function() {
-	    $(this).unbind('mousemove');
+	$(".piece").bind("mouseup", function() {
 		$(this).removeClass("selected");
 	});
 });
 
-var isDragging = false;
 var zIndex = 1;
 
 function updateZIndex(x) {
@@ -45,17 +31,18 @@ function flip(x) {
 	}
 }
 
-function rotate(x) {
-	var n = (90 + parseInt(x.style["transform"] ?
-		x.style["transform"].match(/\d+/)[0] : 0)) % 360;
+function rotate() {
+	updateZIndex(this);
+	var n = (90 + parseInt(this.style["transform"] ?
+		this.style["transform"].match(/\d+/)[0] : 0)) % 360;
 	
-	x.style.transform = n;
-	x.style.webkitTransform = "rotate(" + n + "deg)"
-	x.style.OTransform = "rotate(" + n + "deg)"
-	x.style.MozTransform = "rotate(" + n + "deg)"
+	this.style.transform = n;
+	this.style.webkitTransform = "rotate(" + n + "deg)"
+	this.style.OTransform = "rotate(" + n + "deg)"
+	this.style.MozTransform = "rotate(" + n + "deg)"
 
 	if (n == 0) {
-		flip(x);
+		flip(this);
 	}
 }
 
